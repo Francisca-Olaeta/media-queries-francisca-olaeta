@@ -1,0 +1,390 @@
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Contenedor principal*/
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% auto auto auto 5%;
+    grid-template-areas: 
+    "navbar"
+    "filtros"
+    "productos"
+    "paginas"
+    "footer";
+    justify-content: center;
+}
+
+
+
+/*Navbar*/
+nav {
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    background-color: #547657;
+    padding: 0 2rem;
+}
+
+.menu {
+    display: none;
+}
+
+
+.titulo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.titulo h1 {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 1rem;
+}
+
+/*Filtros*/
+.filtros {
+    grid-area: filtros;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #eef3ee;
+    padding: 1rem;
+}
+
+.filtros h2 {
+    font-size: .9rem;
+    margin: 0;
+}
+
+#ordenar-por {
+    padding: .5rem;
+    border: solid 1px #75a478;
+}
+
+/*Principal*/
+.productos {
+    grid-area: productos;
+    height: 60vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    background-color: #fff;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+/*Card*/
+.card {
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0rem 2.7rem;
+    padding-bottom: 2rem;
+    background-color: #fff;
+}
+
+
+.card h3 {
+    font-size: .9rem;
+    color: #3a503c;
+}
+
+.card-body p {
+    font-size: .9rem;
+    color: #3a503c;
+}
+
+.card-img {
+    width: 60vw;
+    height: 33vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.card-img:hover {
+    background-size: 110%;
+}
+
+
+.foto-1 {
+   background-image: url(../img/card-1.png);
+   background-position: center;
+}
+
+
+.foto-2 {
+   background-image: url(../img/card-2.png);
+   background-position: center;
+}
+
+.foto-3 {
+   background-image: url(../img/card-3.png);
+   background-position: center;
+}
+
+.foto-4 {
+   background-image: url(../img/card-4.png);
+   background-position: center;
+}
+
+.foto-5 {
+   background-image: url(../img/card-5.png);
+   background-position: center;
+}
+
+.foto-6 {
+   background-image: url(../img/card-6.png);
+   background-position: center;
+}
+
+.foto-7 {
+    background-image: url(../img/card-7.png);
+    background-position: center;
+ }
+
+.foto-8 {
+    background-image: url(../img/card-8.png);
+    background-position: center;
+ }
+
+.foto-9 {
+    background-image: url(../img/card-9.png);
+    background-position: center;
+ }
+
+.foto-10 {
+    background-image: url(../img/card-10.png);
+    background-position: center;
+ }
+
+.foto-11 {
+    background-image: url(../img/card-11.png);
+    background-position: center;
+ }
+
+.foto-12 {
+    background-image: url(../img/card-12.png);
+    background-position: center;
+ }
+
+.boton {
+    width: 5rem;
+    height: 2rem;
+    background-color: #a5d6a7;
+    color: #000;
+    text-decoration: none;
+    border-radius: .3rem;
+    border: none;
+}
+
+.boton:hover {
+    background-color: #547657;
+    color: #fff;
+    font-weight: 500;
+}
+
+/*Páginas*/
+.paginas {
+    grid-area: paginas;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    bottom: 6%;
+}
+
+.paginas ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    color: #75a478;
+    padding: 0;
+}
+
+.paginas li {
+    font-size: .8rem;
+    color: #75a478;
+    padding: .3rem;
+    margin: 0 .5rem;
+}
+
+.paginas li:hover {
+    font-weight: 800;
+}
+
+/*Footer*/
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    color: #fff;
+    background-color: #75a478;
+    padding: 2rem 0;
+    position: sticky;
+    bottom: 0;
+}
+
+.iconos {
+    display: flex;
+    padding: 0;
+}
+
+.fa-brands {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0 .3rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*Desktop*/
+
+@media (min-width: 576px) {
+ 
+    /*Contenedor principal desktop*/
+    .contenedor-principal {
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 20% auto;
+        grid-template-rows: 12% auto auto 5% 5%;
+        grid-template-areas: 
+        "navbar filtros"
+        "navbar productos"
+        "navbar productos"
+        "footer paginas"
+        "footer paginas";
+    }
+
+    /*Navbar desktop*/
+    nav {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+
+    .titulo {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo h1 {
+        width: 60%;
+        padding-left: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .titulo .material-icons {
+        font-size: 2.5rem;
+    }
+   
+
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        font-weight: 300;
+    }
+
+    .menu p:hover {
+        font-weight: 500;
+        color: #e0d87b;
+    }
+
+    /*Filtros desktop*/
+    .filtros {
+        padding: .9rem 2rem;
+
+    }
+
+    /*Productos desktop*/
+    .productos {
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        height: 70vh;
+        padding: 3rem;
+    }
+
+
+    /*Card desktop*/
+    .card {
+        width: 25%;
+        padding-bottom: 10rem;
+    }
+
+
+    .card-img {
+        width: 35vw;
+        height: 35vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+    
+    }
+
+    .card-img:hover {
+        background-size: 60%;
+    }
+
+
+    /*Footer desktop*/
+    footer p {
+        display: flex;
+        text-align: center;
+        padding-top: .2rem;
+        font-size: 1rem;
+    }
+
+    .fa-brands {
+        font-size: 1.5rem;
+    }
+    
+   
+
+
+
+
+
+
+
+
+
+    
+} 
