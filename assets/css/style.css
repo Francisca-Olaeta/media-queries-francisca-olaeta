@@ -292,6 +292,8 @@ footer p {
         flex-flow: column wrap;
         justify-content: flex-start;
         padding: 1rem;
+        position: sticky;
+        top: 0;
     }
 
     .titulo {
@@ -331,6 +333,8 @@ footer p {
     /*Filtros desktop*/
     .filtros {
         padding: .9rem 2rem;
+        position: sticky;
+        top: 0;
 
     }
 
